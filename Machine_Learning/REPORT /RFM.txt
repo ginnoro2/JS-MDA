@@ -1,0 +1,63 @@
+(base) priyankarai@priyankas-MacBook-Air ML % python RFM.py
+Datasets loaded in 1.56 seconds.
+Lexical DataFrame columns: Index(['Filename', 'TokenID', 'TokenValue', 'Target'], dtype='object')
+Syntactic DataFrame columns: Index(['Filename', 'FeatureID', 'Feature', 'Target'], dtype='object')
+Preprocessing columns: ['TokenValue']
+Encoded TokenValue: 0    110858
+1     66638
+2     91502
+3     72285
+4     81780
+Name: TokenValue, dtype: int64
+Lexical DataFrame preprocessed in 0.50 seconds.
+Preprocessing columns: ['Feature']
+Encoded Feature: 0    25
+1    12
+2     2
+3    22
+4    17
+Name: Feature, dtype: int64
+Syntactic DataFrame preprocessed in 0.26 seconds.
+Label encoders saved.
+Lexical features and target separated.
+Syntactic features and target separated.
+PCA components: Lexical = 1, Syntactic = 1
+PCA applied to lexical dataset in 0.04 seconds.
+PCA applied to syntactic dataset in 0.02 seconds.
+PCA models saved.
+Data split into training and testing sets in 0.21 seconds.
+Applying SMOTE to lexical dataset...
+SMOTE applied to lexical dataset in 49.19 seconds.
+Applying SMOTE to syntactic dataset...
+SMOTE applied to syntactic dataset in 111.09 seconds.
+Initializing Random Forest classifiers...
+Fitting Random Forest on lexical dataset...
+Random Forest trained on lexical dataset in 201.49 seconds.
+Fitting Random Forest on syntactic dataset...
+Random Forest trained on syntactic dataset in 36.50 seconds.
+Random Forest models saved.
+Predicting on lexical test data with Random Forest...
+Prediction on lexical test data completed in 5.17 seconds.
+Predicting on syntactic test data with Random Forest...
+Prediction on syntactic test data completed in 1.77 seconds.
+
+Lexical Dataset Classification Report (Random Forest):
+              precision    recall  f1-score   support
+
+           0     0.7209    0.8000    0.7584    113682
+           1     0.9165    0.8763    0.8959    284625
+
+    accuracy                         0.8545    398307
+   macro avg     0.8187    0.8382    0.8272    398307
+weighted avg     0.8607    0.8545    0.8567    398307
+
+
+Syntactic Dataset Classification Report (Random Forest):
+              precision    recall  f1-score   support
+
+           0     0.4854    0.6124    0.5416     83844
+           1     0.8379    0.7553    0.7944    222398
+
+    accuracy                         0.7161    306242
+   macro avg     0.6617    0.6838    0.6680    306242
+weighted avg     0.7414    0.7161    0.7252    306242

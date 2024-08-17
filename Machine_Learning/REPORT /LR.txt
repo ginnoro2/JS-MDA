@@ -1,0 +1,38 @@
+(base) priyankarai@priyankas-MacBook-Air ML % python LR.py
+INFO:root:Loading datasets...
+INFO:root:Datasets loaded in 0.88 seconds.
+INFO:root:Preprocessing lexical data...
+INFO:root:Preprocessing columns: ['TokenValue']
+INFO:root:Encoded TokenValue: 0    110858
+1     66638
+2     91502
+3     72285
+4     81780
+Name: TokenValue, dtype: int64
+INFO:root:Lexical data preprocessed in 0.51 seconds.
+INFO:root:Label encoder saved.
+INFO:root:Features and target separated.
+INFO:root:Applying PCA with 1 components...
+INFO:root:PCA applied in 0.03 seconds.
+INFO:root:PCA model saved.
+INFO:root:Splitting data into training and testing sets...
+INFO:root:Data split in 0.11 seconds.
+INFO:root:Applying SMOTE to lexical dataset...
+INFO:root:SMOTE applied in 48.93 seconds.
+INFO:root:Training Logistic Regression on lexical dataset...
+INFO:root:Logistic Regression trained in 0.67 seconds.
+INFO:root:Logistic Regression model saved.
+INFO:root:Predicting on lexical test data with Logistic Regression...
+INFO:root:Prediction completed in 0.00 seconds.
+INFO:root:
+Lexical Dataset Classification Report (Logistic Regression):
+INFO:root:
+              precision    recall  f1-score   support
+
+           0       0.37      0.53      0.43    113682
+           1       0.77      0.63      0.69    284625
+
+    accuracy                           0.60    398307
+   macro avg       0.57      0.58      0.56    398307
+weighted avg       0.66      0.60      0.62    398307
+
